@@ -59,7 +59,7 @@ class DiscuzRobot:
         else:
             print 'none xq!'
 
-    def reply(self, tid, subject = u'',msg = u'不错哦 顶一下 联系电话：18865691019     8454222      QQ 2644134710小王         地址： 开发区技术学院联通营业厅   支持淘宝网银'):
+    def reply(self, tid, subject = u'',msg = u'不错哦 顶一下哦'):
         ''' 回帖 '''
         self.initFormhashXq()
         url = self.forumUrl + '/forum.php?mod=post&action=reply&fid=41&tid={}&extra=page%3D1&replysubmit=yes&infloat=yes&handlekey=fastpost&inajax=1'.format(tid)
@@ -114,7 +114,7 @@ class DiscuzRobot:
             print 'speak faild!'
 
 if __name__ == '__main__':
-    robot = DiscuzRobot('http://www.ytbbs.com', 'user', 'pwd')
+    robot = DiscuzRobot('http://www.xxx.com', 'user', 'pwd')
     robot.login()
 #    robot.sign()
 #    robot.speak()
