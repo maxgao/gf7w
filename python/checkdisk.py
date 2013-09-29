@@ -19,8 +19,8 @@ def checkDisk():
     	if intdata > valus:
     		print intdata,
 	    	print partition
-	else:
-	    pass
+    else:
+	pass
 if __name__ == '__main__':
 	
 	checkDisk()
