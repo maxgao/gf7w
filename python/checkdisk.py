@@ -20,7 +20,7 @@ def checkDisk():
     		print intdata,
 	    	print partition
     else:
-	pass
+	    pass
 if __name__ == '__main__':
 	
 	checkDisk()
