@@ -44,8 +44,4 @@ done
 #封禁某个IP 
 #iptables -I INPUT -s 172.3.2.1 -j DROP 
 
-
-
-
-
-
+#
