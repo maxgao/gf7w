@@ -12,9 +12,9 @@ sock.connect((HOST,PORT))
 message='GET / HTTP/1.1\r\nHost: %s \r\n\r\n'  % HOST
 
 try:
-	sock.send(message)
+    sock.send(message)
 except socket.error:
-	print "send failed"
+    print "send failed"
 
 recv=sock.recv(BUFFER)
 

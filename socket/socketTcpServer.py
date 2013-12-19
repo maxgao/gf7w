@@ -18,13 +18,13 @@ sock.listen(0) #开始监听，参数是队列长度
 
 print ('tcpServer listen at: %s:%s\n\r' %(HOST,PORT))
 while True:
-	client_sock,client_addr=sock.accept() #接受一个连接
-	print('%s:%s connect' %client_addr)
-	while True:
-		recv=client_sock.recv(BUFFER) #读取数据
-		if not recv:
-			client_sock.close()
-			break
-		print ('[Client %s:%s said] :%s' % (client_addr[0],client_addr[1],recv))
-		client_sock.send('tcpServer has received your message')
+    client_sock,client_addr=sock.accept() #接受一个连接
+    print('%s:%s connect' %client_addr)
+    while True:
+        recv=client_sock.recv(BUFFER) #读取数据
+        if not recv:
+            client_sock.close()
+            break
+        print ('[Client %s:%s said] :%s' % (client_addr[0],client_addr[1],recv))
+        client_sock.send('tcpServer has received your message')
 sock.close()
