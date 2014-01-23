@@ -2,7 +2,7 @@
 
 all_badip=[]
 
-txt = open('/home/badip.txt')
+txt = open('/home/g/b.txt')
 for line in txt.readlines():
     line = str(line.split()[0])
     
@@ -13,26 +13,28 @@ lastip = lastip[0:-2]
 
 
 def writeTxt(content):
-    output = open('/home/a.txt','a')
+    output = open('/home/g/a.txt','a')
     output.write('%s \n' % content)
     output.close()
 
 data = {}
 def domainIP(email,domain,ipres):
 #   print ipres 
-    ipress = ipres.split('.')
-    ipress = ipress[0]+'.'+ipress[1]+'.'+ipress[2]
+    try:
+        ipress = ipres.split('.')
+        ipress = ipress[0]+'.'+ipress[1]+'.'+ipress[2]
     
-    if ipres in all_badip or ipress ==lastip:
-        #writeTxt('%s %s  %s '% (email,domain,ipres))
-        if data.has_key(email):
-            data[email] = data[email] +' ' +domain
-        else:
-            data[email] = domain
+        if ipres in all_badip or ipress ==lastip:
+            #writeTxt('%s %s  %s '% (email,domain,ipres))
+            if data.has_key(email):
+                data[email] = data[email] +' ' +domain
+            else:
+                data[email] = domain
+    except:pass
 #   else:
 #       if ipress == lastip:
 #           writeTxt('%s %s  %s '% (email,domain,ipres))
-txt=open('/home/ma.txt')
+txt=open('/home/g/kd.txt')
 for line in txt.readlines():
     line = line.split()
     email = line[0]
